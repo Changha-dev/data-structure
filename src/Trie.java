@@ -50,9 +50,6 @@ public class Trie {
 	}
 
 	public boolean delete(Node node, String str, int idx){
-		if (idx == str.length()) {
-			return false; // 문자열이 끝났는데 여전히 탐색 중이면 잘못된 호출
-		}
 		char c = str.charAt(idx);
 
 		if(!node.child.containsKey(c)){
